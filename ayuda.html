@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Educación Online</title>
+    <link rel="stylesheet" href="css/ayuda.css">
+</head>
+<body>
+        <!-- creamos encabezado -->
+        <header class="header">
+            <!-- Creamos el menu -->
+            <div class="menu container">
+    
+                <a href="#" class="logo"><img src="Imagenes/Logo.png" alt="" class="LogoInicial">EduTec </a>
+                <!-- el / significa el cierre del imput -->
+                <input type="checkbox" id="menu" />
+                <label for="menu">
+                    <!-- cada que le demos a la imagen dentro del label seleccionara el checkbox -->
+                    <img class="menu-icono" src="imagenes/menu.png" alt="">
+                </label>
+                <!-- creamos navegacion -->
+                <nav class="navbar">
+                    <!-- creamos lista desordenada -->
+                    <ul>
+                        <li><a href="index.html" id="Ini">Inicio</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="login.html">Iniciar Sesion</a></li>
+                        <li><a href="https://es.quora.com/">Foro</a></li>
+                        <li><a href="ayuda.html">Ayuda</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- contenido del header -->
+            <div class="header-content container">
+                <div class="header-txt">
+                </div>
+    
+            </div>
+        </header>
+        <br>
+        <br>
+        <div class="container">
+            <h1 class="frecuente">Preguntas Frecuentes</h1>
+            <div class="faq">
+                <div class="question">
+                    <h2>¿Cómo me registro en EduTec?</h2>
+                    <p class="answer">Para registrarte en EduTec, visita la página de registro y completa el formulario con tus datos.</p>
+                </div>
+                <div class="question">
+                    <h2>¿Cómo puedo acceder a los cursos disponibles?</h2>
+                    <p class="answer">Una vez que hayas iniciado sesión en tu cuenta, puedes navegar por la lista de cursos disponibles y seleccionar el que desees para comenzar.</p>
+                </div>
+                <!-- Agrega más preguntas y respuestas según sea necesario -->
+            </div>
+    
+            <h1 class="frecuente">Haz tu Pregunta</h1>
+            <textarea id="custom-question" placeholder="Escribe tu pregunta aquí"></textarea>
+            <br>
+            <button onclick="submitCustomQuestion()" class="env">Enviar</button>
+        </div>
+        
+<!-- Ultima seccion -->
+
+<footer class="footer">
+
+    <div class="footer-content container">
+        <div class="link">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html" id="Ini">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="login.html">Iniciar Sesion</a></li>
+                <li><a href="https://es.quora.com/">Foro</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </div>
+    
+        <div class="link">
+            <h3>Redes Sociales</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">X</a></li>
+                <li><a href="#">Tiktok</a></li>
+                <li><a href="#">WhatsApp</a></li>
+            </ul>
+        </div>
+    
+        <div class="link">
+            <h3>Contactanos</h3>
+            <ul>
+                <li><a href="#">EduTec@gmail.com</a></li>
+                <li><a href="#">+52 5589745421</a></li>
+            </ul>
+        </div>
+    
+        <div class="link">
+            <h3>Recursos</h3>
+            <ul>
+                <li><a href="#">Manuales</a></li>
+                <li><a href="#">Libros Digitales</a></li>
+                <li><a href="#">Conferencias</a></li>
+                <li><a href="#">Revistas Digitales</a></li>
+            </ul>
+        </div>
+    
+    </div>
+    
+    </footer>
+   
+    <script src="js/ayuda.js"></script>
+    
+</body>
+</html>

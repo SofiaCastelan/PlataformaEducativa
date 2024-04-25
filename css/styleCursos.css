@@ -1,0 +1,240 @@
+/*Colocaremos las fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/*Primero escritorio*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*quitar lineas abajo de los enlaces*/
+    text-decoration: none;
+    /*Quitar las bolitas de las listas*/
+    list-style: none;
+}
+
+
+/*Usaremos las fuentes*/
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #D1D1D1;
+}
+
+img{
+    /*Poner todas las imagenes de manera responsiva*/
+    max-height: 100%;
+    max-width: 100%;
+}
+.Cu{
+    text-align: center;
+    font-size: 40px;
+    color: #17484F;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+.container{
+    max-width: 1200px;
+    /*0 arriba y abajo, izquierda y derecha auto para que el 
+    contenido se mantenga en 1200px y este centrado*/
+    margin: 0 auto;
+}
+
+/*parte del header*/
+
+.header{
+    background-color: #101D42;
+    display: flex;
+    align-items: center;
+    min-height: 15vh;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*para que los elementos se coloquen delante del otro*/
+    display: flex;
+    /*para que se centren de manera vertical*/
+    align-items: center;
+    /*para que se separen entre ellos los elementos*/
+    justify-content: space-between;
+}
+
+
+.logo{
+    color: #ceebff;
+    font-size: 25px;
+    font-weight: 800;
+    /*Para que se ponga en mayuscula*/
+    text-transform: uppercase;
+}
+
+.LogoInicial{
+    width: 30px;
+    height: 30px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    /*para que los enlaces se pongan a la izquierda*/
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 15px;
+    padding: 20px;
+    color: #e7e7e7;
+    /*Para que se coloquen correctamente el padding*/
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover{
+    color: #e3ceff;
+}
+
+#menu{
+    /*para ocultar la parte del input*/
+    display: none;
+}
+
+
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    /*para poner la manita a la imagen cuando pase uno sobre ella*/
+    cursor: pointer;
+    /*ocultarlo hasta que aparezca en modo movil*/
+    display: none;
+}
+
+.header-txt{
+    text-align: center;
+  
+}
+
+.header-txt h1{
+    font-size: 55px;
+    /*internileado*/
+    line-height: 1;
+    color: #3F3F3F;
+    /*separacion hacia abajo*/
+  
+}
+
+
+
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: -10px; /* Espacio negativo para el margen entre los elementos */
+}
+.curso {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.33% - 20px); /* Ancho del 33.33% con 10px de espacio alrededor */
+    margin: 10px; /* Espacio alrededor de cada curso */
+}
+.curso h2 {
+    margin-top: 0;
+}
+.curso p {
+    margin-top: 10px;
+}
+.curso img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/*footer*/
+
+.footer{
+    background-color: #101D42;
+    padding: 50px 0;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3{
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.link a{
+    color: #dadada;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.link a:hover{
+    color: #b99dd3;
+}
+
+/*Para movil*/
+
+@media(max-width:991px){
+    .menu{
+        padding: 20px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top:100%;
+        left: 0;
+        right: 0;
+        background-color: #cfae99;
+        display: none;
+    }
+
+    .menu .navbar ul li a:hover{
+        color: #000000;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    /*el signo ~ se hace con alt + 126*/
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+
+    .footer{
+        padding: 30px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .link{
+        margin-bottom: 10px;
+    }
+
+
+}

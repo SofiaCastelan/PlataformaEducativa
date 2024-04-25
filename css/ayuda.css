@@ -1,0 +1,272 @@
+/*Colocaremos las fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/*Primero escritorio*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*quitar lineas abajo de los enlaces*/
+    text-decoration: none;
+    /*Quitar las bolitas de las listas*/
+    list-style: none;
+}
+
+
+/*Usaremos las fuentes*/
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #D1D1D1;
+}
+
+
+
+/*parte del header*/
+
+.header{
+    background-color: #101D42;
+    display: flex;
+    align-items: center;
+    min-height: 15vh;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*para que los elementos se coloquen delante del otro*/
+    display: flex;
+    /*para que se centren de manera vertical*/
+    align-items: center;
+    /*para que se separen entre ellos los elementos*/
+    justify-content: space-between;
+}
+
+
+.logo{
+    color: #ceebff;
+    font-size: 25px;
+    font-weight: 800;
+    /*Para que se ponga en mayuscula*/
+    text-transform: uppercase;
+}
+
+.LogoInicial{
+    width: 30px;
+    height: 30px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    /*para que los enlaces se pongan a la izquierda*/
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 15px;
+    padding: 20px;
+    color: #e7e7e7;
+    /*Para que se coloquen correctamente el padding*/
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover{
+    color: #e3ceff;
+}
+
+#menu{
+    /*para ocultar la parte del input*/
+    display: none;
+}
+
+
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    /*para poner la manita a la imagen cuando pase uno sobre ella*/
+    cursor: pointer;
+    /*ocultarlo hasta que aparezca en modo movil*/
+    display: none;
+}
+
+.header-txt{
+    text-align: center;
+  
+}
+
+.header-txt h1{
+    font-size: 55px;
+    /*internileado*/
+    line-height: 1;
+    color: #3F3F3F;
+    /*separacion hacia abajo*/
+  
+}
+/* Estilos para las preguntas frecuentes */
+.question {
+    margin-bottom: 20px;
+    text-align: center; /* Centrar el texto de la pregunta */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #0052cc;
+    cursor: pointer; /* Cambiar el cursor al hacer hover sobre la pregunta */
+}
+
+.question h2::after {
+    content: '\25B8'; /* Código Unicode para la flecha triangular */
+    margin-left: 5px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.question p {
+    display: none;
+    text-align: center; /* Alinear el texto de la respuesta a la izquierda */
+    padding-left: 20px; /* Agregar un pequeño espacio para la flecha */
+    margin-top: 10px; /* Espacio superior para la respuesta */
+}
+
+.question.show p {
+    display: block;
+}
+
+
+/* Estilos para la pregunta personalizada */
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0052cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #003d99;
+}
+
+/* Estilos para mostrar respuestas */
+.question p {
+    display: none;
+}
+
+.question p.show {
+    display: block;
+}
+
+.frecuente{
+    text-align: center;
+    margin: 40px 0 40px 0;
+}
+
+textarea{
+    margin-right: 20px;
+    margin-left: 150px;
+    align-content: center;
+    text-align: center;
+    width: 80%;
+    height: 100px;
+}
+
+.env{
+    margin-right: 50%;
+    margin-left: 47%;
+    margin-bottom: 2%;
+}
+
+/*footer*/
+
+.footer{
+    background-color: #101D42;
+    padding: 50px 20px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3{
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.link a{
+    color: #dadada;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.link a:hover{
+    color: #b99dd3;
+}
+
+/*Para movil*/
+
+@media(max-width:991px){
+    .menu{
+        padding: 20px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top:100%;
+        left: 0;
+        right: 0;
+        background-color: #cfae99;
+        display: none;
+    }
+
+    .menu .navbar ul li a:hover{
+        color: #000000;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    /*el signo ~ se hace con alt + 126*/
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+
+    .footer{
+        padding: 30px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .link{
+        margin-bottom: 10px;
+    }
+
+
+}
